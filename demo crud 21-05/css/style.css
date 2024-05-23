@@ -9,12 +9,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* body{
-    display: flex;
-    background-image: url("/img/img1.png");
-    background-repeat: no-repeat;
 
-} */
+body{
+    display: flex;
+   
+}
 .flex{
   display: flex;
 }
@@ -77,7 +76,7 @@ main body section
 
 .main--content{
     position: relative;
-    background: #ebe9e9;
+    background: #ebe9e921;
     width: 100%;
     padding: 1rem ;
 
@@ -87,7 +86,7 @@ main body section
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: #fff;
+    background: #f68585;
     border-radius: 10px;
     padding: 5px 1rem;
     margin-bottom: 1rem;
@@ -102,7 +101,7 @@ main body section
     align-items: center;  
     border: none;
     outline: none;
-    color: rgb(104, 109, 105);
+    color: rgb(3, 162, 35);
     padding: 14px 5px;
     background-color: inherit;
     font-family: inherit;
@@ -210,9 +209,9 @@ main body section
   .card:nth-child(3){
     background-color: #2e7d32;
   }
-  /* .card:nth-child(4){
+  .card:nth-child(4){
     background-color: #d50000;
-  } */
+  }
   .card-inner{
     display: flex;
     align-items: center;

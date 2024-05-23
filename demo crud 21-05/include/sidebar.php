@@ -1,7 +1,4 @@
-
-
-<body>
-    <div style="background-color: rgb(4, 89, 158);" class="sidebar">
+<div style="background-color: dimgray;" class="sidebar">
         <div class="logo"><img src="img/logopic.png" alt=""></div>
         <ul class="menu">
             <li>
