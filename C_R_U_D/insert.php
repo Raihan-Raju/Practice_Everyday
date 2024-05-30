@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
             <div class="col-sm-3"></div>
 
             <div class="col-sm-6 mt-4 pt-4 border border-success"> 
-                <form action="#" method="POST" ecntype="multipart/form-data"> 
+                <form action="insert.php" method="POST" ecntype="multipart/form-data"> 
                     Name : <br>
                     <input type="text" name="name"><br><br>
                     E-Mail : <br>

@@ -1,4 +1,15 @@
 
+<?php include"config.php";?>
+<?php
+    if(isset($_GET['deleteid'])){ 
+        $deleteId  = $_GET['deleteid'];
+        $sql     = "DELETE FROM product_details WHERE id='$deleteId'"; 
+        if(mysqli_query($conn,$sql) == TRUE){ 
+            header("location:view.php");
+        }
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +26,14 @@
             <div class="col-sm-3"></div>
 
             <div class="col-sm-6 mt-4 pt-4 border border-success "> 
+                <h1 class='bg-success text-center text-white'>User's Information</h1>
+                <h3><a href="insert.php" class='text-decoration-none'>Add User</a></h3>
                <?php
                include"config.php";
                $table_data   = "SELECT * FROM product_details";
                $query        = mysqli_query($conn,$table_data);
 
-               echo "<table class='table table-success border border-success'> 
+               echo "<table class='table table-success'> 
                         <tr> 
                             <th>ID</th>
                             <th>Name</th>
@@ -28,18 +41,20 @@
                             <th>Address</th>
                             <th>Action</th>
                         </tr>";
-                while($showData = mysli_fetch_assoc( $query )){ 
+                while($showData = mysqli_fetch_assoc($query)){ 
 
                     echo 
-                    <tr> 
-                    <td>$showData[id]</td>
-                    <td>$showData[name]</td>
-                    <td>$showData[email]</td>
-                    <td>$showData[address]</td>
-                    <td> 
-                        <span><a href=""></a></span>
+                    "<tr> 
+                        <td>$showData[id]</td>
+                        <td>$showData[name]</td>
+                        <td>$showData[email]</td>
+                        <td>$showData[address]</td>
+                        <td> 
+                        <span class='btn btn-success'><a href='edit.php?id={$showData['id']}' class='text-decoration-none text-white'>Edit</a></span>
+                        <span class='btn btn-danger'><a href='view.php?deleteid={$showData['id']}' class='text-decoration-none text-white'>Delete</a></span>
                     </td>
-                    </tr>
+                        </td>
+                    </tr>";
 
                 }
 
